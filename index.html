@@ -2,72 +2,58 @@
 <html>
 
 <head>
-    <title> CRUD com JAVASCRIPT puro </title>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
+
 <body>
-
     <table>
-
         <tr>
             <td>
-                <form>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                     <div>
-
-                        <label> Nome Completo </label>
-                        <input type="text" name="nomeCompleto">
+                        <label>Nome Completo</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
                     </div>
-
                     <div>
-                        <label> ID </label>
-                        <input type="text" name="iD">
+                        <label>ID</label>
+                        <input type="text" name="empCode" id="empCode">
                     </div>
-
                     <div>
-                        <label> Salário </label>
-                        <input type="text" name="salario">
+                        <label>Salario</label>
+                        <input type="text" name="salary" id="salary">
                     </div>
-
                     <div>
-                        <label> Cidade </label>
-                        <input type="text" name="cidade">
+                        <label>Cidade</label>
+                        <input type="text" name="city" id="city">
                     </div>
-
-                    <div>
-                        <div class = "form-action-buttons"></div>
-                        <input type= "submit" value="Submit">
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
                     </div>
-
                 </form>
-                <td>
-                    <table class= "list">
-                        <thead>
-                            <tr>
-                                <th>Nome Completo </th>
-                                <th>ID</th>
-                                <th>salário</th>
-                                <th>Cidade</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </td>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Nome Completo</th>
+                            <th>Codigo</th>
+                            <th>Salario</th>
+                            <th>Cidade</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
+                    </tbody>
+                </table>
             </td>
         </tr>
-
-
     </table>
-
-    <script  src= "js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
-
-
 </html>
-
-
-
-
-
 
